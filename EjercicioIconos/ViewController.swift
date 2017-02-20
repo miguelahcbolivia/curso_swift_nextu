@@ -10,6 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var nameText: UITextField!
+    
+    @IBOutlet weak var lastNameText: UITextField!
+    
+    
+    @IBOutlet weak var helloText: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -18,6 +26,12 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    @IBAction func sayHelloAction(_ sender: Any) {
+        
+        self.helloText.text = "hola \(self.nameText.text!) \(self.lastNameText.text!)"
     }
 
 
